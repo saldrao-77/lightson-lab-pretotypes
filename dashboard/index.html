@@ -6,63 +6,71 @@
 <title>LightsOn Lab — Command Center</title>
 <style>
 :root { --bg:#0b0d10; --card:#141820; --line:#243044; --text:#e8eaed; --muted:#9aa0a6;
-  --adv:#81c995; --itr:#fdd663; --kill:#f28b82; --link:#8ab4f8; }
+  --adv:#81c995; --itr:#fdd663; --kill:#f28b82; --link:#8ab4f8; --warn:#f5a623; }
 * { box-sizing:border-box; }
-body { margin:0; font:15px/1.45 system-ui,sans-serif; background:var(--bg); color:var(--text); }
-a { color:var(--link); }
-.wrap { max-width:1200px; margin:0 auto; padding:24px 16px 64px; }
+body { margin:0; font:14px/1.45 system-ui,sans-serif; background:var(--bg); color:var(--text); }
+a { color:var(--link); word-break:break-all; }
+.wrap { max-width:1600px; margin:0 auto; padding:24px 16px 64px; }
 h1 { font-size:28px; margin:0 0 4px; }
 .sub { color:var(--muted); margin-bottom:24px; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:24px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:12px; margin-bottom:24px; }
 .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
 .card .n { font-size:28px; font-weight:700; }
 .card .l { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
 .blockers { background:#2a1a10; border:1px solid #5c3b1e; border-radius:12px; padding:14px 16px; margin-bottom:24px; }
-.blockers h2 { margin:0 0 8px; font-size:16px; color:#f5a623; }
-.blockers p { margin:0 0 8px; }
-.status-note { color:var(--muted); }
-.tests { margin-bottom:24px; }
-.sentiment { margin-bottom:24px; }
-.source-note { color:var(--muted); font-size:12px; margin:10px 0 0; }
-.tests h2 { margin:0 0 10px; font-size:16px; }
+.blockers h2 { margin:0 0 8px; font-size:16px; color:var(--warn); }
+.blockers ul { margin:0; padding-left:18px; }
+.blockers li { margin-bottom:6px; }
+.tests, .sentiment { margin-bottom:24px; }
+.tests h2, .sentiment h2 { margin:0 0 10px; font-size:16px; }
 .test-list { display:grid; gap:8px; color:var(--muted); }
 .test-list strong { color:var(--text); }
-table { width:100%; border-collapse:collapse; background:var(--card); border-radius:12px; overflow:hidden; }
+.source-note { color:var(--muted); font-size:12px; margin:10px 0 0; }
+.banner { background:#1a2433; border:1px solid #3a5080; color:#c6d4f0; border-radius:10px; padding:10px 14px; margin:0 0 12px; font-weight:600; font-size:13px; }
+.filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+.filters button { background:var(--card); border:1px solid var(--line); color:var(--text); border-radius:999px; padding:6px 12px; cursor:pointer; }
+.filters button.on { border-color:var(--link); color:var(--link); }
+.table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--line); border-radius:12px; background:var(--card); }
+table { width:100%; min-width:1400px; border-collapse:collapse; }
 th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
-th { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+th { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; white-space:nowrap; position:sticky; top:0; background:var(--card); }
+td.desc, td.est { font-size:13px; color:var(--muted); max-width:220px; }
+td.page { font-size:12px; max-width:280px; }
 .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; font-weight:600; }
 .pill.advance { background:#14301f; color:var(--adv); }
 .pill.iterate { background:#2f2a12; color:var(--itr); }
 .pill.kill { background:#3a1512; color:var(--kill); }
-.pill.queued { background:#1a2230; color:var(--muted); }
-.filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
-.filters button { background:var(--card); border:1px solid var(--line); color:var(--text); border-radius:999px; padding:6px 12px; cursor:pointer; }
-.filters button.on { border-color:var(--link); color:var(--link); }
 footer { margin-top:24px; color:var(--muted); font-size:13px; }
+@media (max-width:720px) {
+  .cards-mobile { display:grid; gap:10px; }
+  .mcard { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px; }
+  .mcard .id { color:var(--muted); font-size:12px; }
+  .mcard h3 { margin:4px 0 8px; font-size:15px; }
+  .mcard dl { margin:0; display:grid; grid-template-columns:90px 1fr; gap:4px 8px; font-size:12px; }
+  .mcard dt { color:var(--muted); }
+  .table-desktop { /* keep table for filters */ }
+}
 </style>
 </head>
 <body>
 <main class="wrap">
   <h1>LightsOn Lab — Command Center</h1>
-  <p class="sub">Polsia-style Idea Lab view · Updated 2026-09-14 18:48 UTC · Brand: LightsOn Lab · Inbox: lightsonlab@agentmail.to</p>
+  <p class="sub">Polsia-style Idea Lab view · Updated 2026-09-14 19:00 UTC · Brand: LightsOn Lab · Inbox: lightsonlab@agentmail.to</p>
 
   <div class="grid">
     <div class="card"><div class="n">23</div><div class="l">Advance</div></div>
     <div class="card"><div class="n">26</div><div class="l">Iterate</div></div>
     <div class="card"><div class="n">1</div><div class="l">Folded</div></div>
-    <div class="card"><div class="n">2</div><div class="l">Live Reddit tests</div></div>
+    <div class="card"><div class="n">2</div><div class="l">Live tests</div></div>
     <div class="card"><div class="n">5+</div><div class="l">Emails</div></div>
     <div class="card"><div class="n">0</div><div class="l">Signups</div></div>
   </div>
 
   <div class="blockers">
-    <h2>Still cooking</h2>
-    <p class="status-note"><strong>Clear:</strong> AgentMail is LIVE at lightsonlab@agentmail.to. SCM/GitHub is connected and ADVANCE pages are publishing.</p>
+    <h2>Open blockers (from MONITOR)</h2>
     <ul>
-      <li>Facebook / Nextdoor account creation for multi-channel tests</li>
-      <li>FormSubmit confirmation on the first signup</li>
-      <li>Optional metro for benefits and childcare depth tests</li>
-      <li>Reddit day-cap — paused after 2 tests today</li>
+      <li><strong>Reddit login (LightsOn Lab)</strong> — First-wave Mom Tests blocked on Demand computer (no session). Day-cap already hit via other path (2/2 today).</li>
+      <li><strong>Metro (optional until B3-03 / B5-03)</strong> — Benefits screener + childcare waitlist need a city to go deep.</li>
     </ul>
   </div>
 
@@ -73,17 +81,18 @@ footer { margin-top:24px; color:var(--muted); font-size:13px; }
       <div><strong>Gig-tax</strong> · Reddit r/uberdrivers · <a href="https://www.reddit.com/r/uberdrivers/comments/1wgbm86/last_tax_season_with_gig_income_refund_owe_or/" target="_blank" rel="noopener">LIVE</a></div>
       <div><strong>Next:</strong> fee-decoder / quote-checker / repair-triage → Facebook + Nextdoor</div>
       <div><strong>Queued:</strong> stack-audit, greens-dupe, glp1-cash (wellness Facebook + Reddit later)</div>
+      <div><strong>Anti-ban:</strong> ≤1–2 Reddit/day · no links in first posts · no identical cross-posts</div>
     </div>
   </section>
 
   <section class="sentiment card">
     <h2>Consumer sentiment rollup</h2>
     <div class="test-list">
-      <div><strong>B0-01 Utility:</strong> awaiting mod / 0 replies</div>
-      <div><strong>B0-02 Gig-tax:</strong> live / engagement pending</div>
-      <div><strong>B2 fee-decoder / quote-checker / repair-triage:</strong> pending Facebook / Nextdoor accounts</div>
+      <div><strong>B0-01 Utility:</strong> awaiting mod / 0 replies · signal: none</div>
+      <div><strong>B0-02 Gig-tax:</strong> live / engagement pending · signal: none</div>
+      <div><strong>B2-06 fee-decoder / B2-07 quote-checker / B2-08 repair-triage:</strong> pages live; FB/Nextdoor accounts creating</div>
     </div>
-    <p class="source-note">Feed updated 2026-09-14 18:47 UTC · no signal yet.</p>
+    <p class="source-note">SENTIMENT-ROLLUP 2026-09-14 18:49 UTC · no consumer signal yet. Scout DASHBOARD-FEED not present — charge/dist/TAM estimated from PIPELINE hangouts.</p>
   </section>
 
   <div class="filters">
@@ -92,418 +101,634 @@ footer { margin-top:24px; color:var(--muted); font-size:13px; }
     <button data-f="iterate">Iterate</button>
   </div>
 
+  <div class="banner">Money / TAM / distribution figures are ESTIMATES — not validated.</div>
+
+  <div class="table-wrap table-desktop">
   <table id="ideas">
     <thead>
-      <tr><th>ID</th><th>Idea</th><th>Status</th><th>Lane</th><th>Page</th><th>Live test</th><th>Sentiment</th></tr>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Charge model (ESTIMATE)</th>
+        <th>Distribution (ESTIMATE)</th>
+        <th>TAM / path to $10–20k/mo (ESTIMATE)</th>
+        <th>Status</th>
+        <th>Lane</th>
+        <th>Page</th>
+        <th>Live test</th>
+        <th>Sentiment</th>
+      </tr>
     </thead>
     <tbody>
 <tr class="advance">
   <td><code>B0-01</code></td>
   <td>Utility bill fight kit</td>
+  <td class="desc">Upload a PDF bill → dispute letter + cheaper rate-plan switch checklist</td>
+  <td class="est">$12 fight kit OR $5/mo monitor; B2B later $29–99 (ESTIMATE)</td>
+  <td class="est">Reddit PF + Nextdoor + local COL FB → organic Cal-AI path (ESTIMATE)</td>
+  <td class="est">~1.5–3k kits/mo or ~2–4k $5 subs → $10–20k; B2B assoc. upsell (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>lights-on / utilities</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/bill-fight/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/bill-fight/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/bill-fight/</a></td>
   <td><a href="https://www.reddit.com/r/personalfinance/comments/1wgbk90/when_your_utility_bill_spiked_what_did_you/" target="_blank" rel="noopener">Reddit r/personalfinance (mod queue)</a></td>
   <td>Awaiting mod / 0 replies</td>
 </tr><tr class="advance">
   <td><code>B0-02</code></td>
   <td>Gig + freelance tax set-aside (absorbs B5-04)</td>
+  <td class="desc">Forward gig payouts / CSV → weekly set-aside $ for quarterly taxes</td>
+  <td class="est">$9–15/mo or $49 tax-season pack (ESTIMATE)</td>
+  <td class="est">r/uberdrivers + driver FB + TikTok tax tips (ESTIMATE)</td>
+  <td class="est">~1–2k subs @ $10 → $10–20k; freelancers expand TAM (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>side hustle / gig + freelance</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/gig-tax/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/gig-tax/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/gig-tax/</a></td>
   <td><a href="https://www.reddit.com/r/uberdrivers/comments/1wgbm86/last_tax_season_with_gig_income_refund_owe_or/" target="_blank" rel="noopener">Reddit r/uberdrivers LIVE</a></td>
   <td>Live / engagement pending</td>
 </tr><tr class="iterate">
   <td><code>B0-03</code></td>
   <td>Cabinet → cocktails</td>
+  <td class="desc">List bottles on shelf → recipes you can make tonight (+ cheapest missing SKU)</td>
+  <td class="est">$5 one-shot or freemium + affiliate SKUs (ESTIMATE)</td>
+  <td class="est">r/cocktails + home-bartender FB + TikTok (ESTIMATE)</td>
+  <td class="est">Affiliate-heavy; ~2–4k paying users or affiliate mix → $10k path thin (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>vices / alcohol</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/cabinet-cocktails/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/cabinet-cocktails/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/cabinet-cocktails/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B1-01</code></td>
   <td>Dead-stock wine alerts</td>
+  <td class="desc">Local restaurants dump slow bottles → drinkers get surplus deal alerts</td>
+  <td class="est">$5–8/mo alerts or restaurant lead fee (ESTIMATE)</td>
+  <td class="est">r/wine + city food FB + Instagram foodies (ESTIMATE)</td>
+  <td class="est">Metro density needed; ~1.5k subs/city cluster → $10k (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>vices / alcohol</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/dead-stock-wine/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/dead-stock-wine/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/dead-stock-wine/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B1-02</code></td>
   <td>Bankroll tilt journal</td>
+  <td class="desc">Stake log + kill-switch when your own tilt rules trip</td>
+  <td class="est">$8–12/mo or $49/yr (ESTIMATE)</td>
+  <td class="est">r/sportsbook + r/dfsports + TikTok responsible-play (ESTIMATE)</td>
+  <td class="est">~1–2k paying bettors → $10–20k; legal-state only (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>vices / gambling (legal)</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/tilt-journal/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/tilt-journal/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/tilt-journal/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B1-03</code></td>
   <td>Supplement stack audit</td>
+  <td class="desc">Paste stack → redundant spend + interaction flags (ask-your-MD)</td>
+  <td class="est">$12 audit or $7/mo re-check (ESTIMATE)</td>
+  <td class="est">r/Supplements + wellness FB + TikTok (ESTIMATE)</td>
+  <td class="est">~1–2.5k audits/mo or ~1.5k subs → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>vices / legal wellness</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/stack-audit/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/stack-audit/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/stack-audit/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B1-04</code></td>
   <td>Nicotine quit taper planner</td>
+  <td class="desc">Log pouches/vape/gum → step-down calendar + $ saved</td>
+  <td class="est">$5–9/mo or free+affiliate quit products (ESTIMATE)</td>
+  <td class="est">r/QuitVaping + stop-smoking FB (ESTIMATE)</td>
+  <td class="est">Compete w/ free apps; affiliate path more likely than $10k pure sub (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>vices / nicotine-adjacent</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/nicotine-taper/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/nicotine-taper/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/nicotine-taper/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B1-05</code></td>
   <td>Adult wellness match (21+)</td>
+  <td class="desc">Preference quiz → legal wellness product shortlist (no medical claims)</td>
+  <td class="est">Affiliate CPA + $5–10 premium match (ESTIMATE)</td>
+  <td class="est">Age-gated Reddit/FB + discreet SEO (ESTIMATE)</td>
+  <td class="est">Affiliate-led; compliance heavy; $10k via CPA if conversion holds (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>vices / adult wellness</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/adult-wellness-match/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/adult-wellness-match/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/adult-wellness-match/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B1-06</code></td>
   <td>Greens/AG dupe cost calculator</td>
+  <td class="desc">Compare greens powder to grocery whole-food cost + simpler stack</td>
+  <td class="est">Free lead → $9 report or affiliate grocery/supps (ESTIMATE)</td>
+  <td class="est">r/Supplements + TikTok AG1 discourse + wellness FB (ESTIMATE)</td>
+  <td class="est">Viral calc → affiliate; ~high traffic / low ARPU path to $10k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>cheating / eating</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/greens-dupe/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/greens-dupe/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/greens-dupe/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B1-07</code></td>
   <td>GLP-1 cash vs coupon planner</td>
+  <td class="desc">Dose/pharmacy → cash path, coupons, compounding comps (info only)</td>
+  <td class="est">$15 plan or $9/mo updates (ESTIMATE)</td>
+  <td class="est">r/Semaglutide + r/Ozempic + WL FB (ESTIMATE)</td>
+  <td class="est">~700–1.5k paying users → $10–20k; liability watch (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>cheating / weight-loss</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/glp1-cash-path/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/glp1-cash-path/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/glp1-cash-path/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B1-08</code></td>
   <td>CoolSculpt price map</td>
+  <td class="desc">Zip → clinic price ranges for popular non-invasive treatments</td>
+  <td class="est">$12 zip report or clinic lead fees (ESTIMATE)</td>
+  <td class="est">r/PlasticSurgery + local beauty FB + SEO (ESTIMATE)</td>
+  <td class="est">Lead-gen B2B to clinics may beat consumer; metro-dependent (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>cheating / aesthetics</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/coolsculpt-prices/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/coolsculpt-prices/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/coolsculpt-prices/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B1-09</code></td>
   <td>Hair transplant tourism comp</td>
+  <td class="desc">Grafts + country → all-in cost + downtime math (info)</td>
+  <td class="est">$19 compare pack or clinic referral fee (ESTIMATE)</td>
+  <td class="est">r/tressless + r/HairTransplants + YouTube SEO (ESTIMATE)</td>
+  <td class="est">High ticket affiliate; tens of referrals/mo → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>cheating / medical tourism</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/hair-tourism/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/hair-tourism/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/hair-tourism/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B1-10</code></td>
   <td>Hims/Hers alternative map</td>
+  <td class="desc">Symptom path → telehealth vs OTC vs GP + monthly cost bands</td>
+  <td class="est">$9 map or affiliate telehealth (ESTIMATE)</td>
+  <td class="est">r/tressless + men’s health FB + TikTok (ESTIMATE)</td>
+  <td class="est">Affiliate-led; ~mid hundreds of referrals → $10k+ (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>cheating / aesthetics-hormones</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/hims-alt-map/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/hims-alt-map/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/hims-alt-map/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B2-01</code></td>
   <td>Masstige lookalike finder</td>
+  <td class="desc">Paste luxury URL/photo → near-identical Target/masstige picks</td>
+  <td class="est">Freemium + affiliate retail (ESTIMATE)</td>
+  <td class="est">Fashion dupe Reddit/TikTok + FB thrift (ESTIMATE)</td>
+  <td class="est">Cal-AI style viral; affiliate mix to $10–20k if match quality holds (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>masstige</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/lookalike-finder/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/lookalike-finder/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/lookalike-finder/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B2-02</code></td>
   <td>TJ Maxx hunt list</td>
+  <td class="desc">Wishlist brands → alert when similar SKUs hit local off-price</td>
+  <td class="est">$5–8/mo alerts (ESTIMATE)</td>
+  <td class="est">r/tjmaxx + haul FB + TikTok (ESTIMATE)</td>
+  <td class="est">~1.5–3k subs metro cluster → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>masstige / discount</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/tjmaxx-hunt/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/tjmaxx-hunt/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/tjmaxx-hunt/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B2-03</code></td>
   <td>Dollar-store dinner planner</td>
+  <td class="desc">$20 basket → 5 dinners from Dollar Tree/Aldi mix</td>
+  <td class="est">Free + affiliate / $4 meal-week pack (ESTIMATE)</td>
+  <td class="est">r/EatCheapAndHealthy + coupon FB + TikTok (ESTIMATE)</td>
+  <td class="est">High volume / low ARPU; ads+affiliate path (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>masstige / grocery</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/dollar-dinners/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/dollar-dinners/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/dollar-dinners/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B2-04</code></td>
   <td>Deal verifier</td>
+  <td class="desc">Paste viral deal link → scam/shipping/return red-flag score</td>
+  <td class="est">Freemium + $5/mo power user (ESTIMATE)</td>
+  <td class="est">r/Scams + deal FB + TikTok Shop discourse (ESTIMATE)</td>
+  <td class="est">Hard vs Google; need viral wedge for $10k (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>masstige / almost-too-good</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/deal-verifier/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/deal-verifier/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/deal-verifier/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B2-05</code></td>
   <td>Mobile-home park screener</td>
+  <td class="desc">Zip + budget → parks, lot rents, scam flags (info)</td>
+  <td class="est">$12–19 screener report (ESTIMATE)</td>
+  <td class="est">r/mobilehome + local housing FB (ESTIMATE)</td>
+  <td class="est">Niche but high intent; ~500–1k reports/mo → $10k path (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>lights-on / housing</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/mobile-home-screener/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/mobile-home-screener/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/mobile-home-screener/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B2-06</code></td>
   <td>Apartment fee decoder</td>
+  <td class="desc">Paste lease/fee sheet → junk fees total + negotiation script</td>
+  <td class="est">$12 decode or $5/mo renter pack (ESTIMATE)</td>
+  <td class="est">r/Apartment + city rent FB + Nextdoor (ESTIMATE)</td>
+  <td class="est">~1–2k decodes/mo → $10–20k; seasonal move peaks (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>lights-on / housing</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/fee-decoder/">page</a></td>
-  <td>—</td>
-  <td>Pending Facebook / Nextdoor accounts</td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/fee-decoder/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/fee-decoder/</a></td>
+  <td>FB/Nextdoor next</td>
+  <td>Pending FB/Nextdoor accounts</td>
 </tr><tr class="advance">
   <td><code>B2-07</code></td>
   <td>Trade quote checker</td>
+  <td class="desc">Paste 2–3 HVAC/plumber quotes → fair-range + red flags</td>
+  <td class="est">$15 check or pro lead fee (ESTIMATE)</td>
+  <td class="est">r/HomeImprovement + Nextdoor + FB homeowners (ESTIMATE)</td>
+  <td class="est">~700–1.5k checks or lead mix → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>lights-on / trades</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/quote-checker/">page</a></td>
-  <td>—</td>
-  <td>Pending Facebook / Nextdoor accounts</td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/quote-checker/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/quote-checker/</a></td>
+  <td>FB/Nextdoor next</td>
+  <td>Pending FB/Nextdoor accounts</td>
 </tr><tr class="advance">
   <td><code>B2-08</code></td>
   <td>Emergency repair triage</td>
+  <td class="desc">Symptom photos + words → DIY vs call-pro + rough cost band</td>
+  <td class="est">$9 triage or $6/mo home kit (ESTIMATE)</td>
+  <td class="est">r/fixItYourself + local DIY FB + Nextdoor (ESTIMATE)</td>
+  <td class="est">Panic moments convert; ~1–2k triages/mo → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>lights-on / trades</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/repair-triage/">page</a></td>
-  <td>—</td>
-  <td>Pending Facebook / Nextdoor accounts</td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/repair-triage/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/repair-triage/</a></td>
+  <td>FB/Nextdoor next</td>
+  <td>Pending FB/Nextdoor accounts</td>
 </tr><tr class="advance">
   <td><code>B2-09</code></td>
   <td>Aldi/Costco basket optimizer</td>
+  <td class="desc">Grocery list → cheapest mix of Aldi/Costco/Walmart this week</td>
+  <td class="est">$5–8/mo or free+affiliate (ESTIMATE)</td>
+  <td class="est">r/aldi + r/Costco + grocery TikTok (ESTIMATE)</td>
+  <td class="est">Price freshness hard; subs+affiliate if sticky (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>lights-on / grocery</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/basket-optimizer/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/basket-optimizer/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/basket-optimizer/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B2-10</code></td>
   <td>SNAP week planner</td>
+  <td class="desc">Pantry + SNAP budget → recipes + aisle/store map</td>
+  <td class="est">Free + donations / $4/mo premium (ESTIMATE)</td>
+  <td class="est">r/foodstamps + mutual-aid FB (ESTIMATE)</td>
+  <td class="est">Trust/stigma sensitive; grant or low-ARPU path (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>lights-on / benefits</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/snap-week/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/snap-week/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/snap-week/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B3-01</code></td>
   <td>Cheap bus / rail finder</td>
+  <td class="desc">City pair + date → cheapest bus/rail mix + overnight tips</td>
+  <td class="est">Affiliate tickets + $5 trip pack (ESTIMATE)</td>
+  <td class="est">r/Greyhound + budget-travel FB (ESTIMATE)</td>
+  <td class="est">API flaky vs Google; affiliate thin path (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>infra / transit</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/cheap-bus/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/cheap-bus/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/cheap-bus/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B3-02</code></td>
   <td>Commute cost killer</td>
+  <td class="desc">Home↔work → car vs transit vs carpool true monthly cost</td>
+  <td class="est">$5 report or employer B2B seat (ESTIMATE)</td>
+  <td class="est">r/personalfinance + city transit subs (ESTIMATE)</td>
+  <td class="est">B2B HR/benefits pack may unlock $10–20k faster (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>infra / transit</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/commute-cost/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/commute-cost/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/commute-cost/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B3-03</code></td>
   <td>Benefits stack screener</td>
+  <td class="desc">8 questions → likely LIHEAP/SNAP/local energy aid + form links</td>
+  <td class="est">Free consumer + $29–99/mo org seat (ESTIMATE)</td>
+  <td class="est">City sub + mutual-aid FB (needs metro) (ESTIMATE)</td>
+  <td class="est">Metro-locked; nonprofit/B2B seats → $10–20k (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>infra / benefits (needs metro)</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/benefits-screener/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/benefits-screener/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/benefits-screener/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B3-04</code></td>
   <td>Recert reminders</td>
+  <td class="desc">Enter benefits + recert dates → SMS/email reminders + doc checklist</td>
+  <td class="est">$5–9/mo SMS reminders (ESTIMATE)</td>
+  <td class="est">r/foodstamps + caseworker FB (ESTIMATE)</td>
+  <td class="est">~1.5–3k SMS subs → $10–20k if retention holds (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>infra / benefits</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/recert-reminders/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/recert-reminders/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/recert-reminders/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B3-05</code></td>
   <td>Denial appeal kit</td>
+  <td class="desc">Paste insurer denial → appeal template + docs checklist (info)</td>
+  <td class="est">$19–29 kit (ESTIMATE)</td>
+  <td class="est">r/HealthInsurance + condition FB (ESTIMATE)</td>
+  <td class="est">~400–800 kits/mo → $10–20k; trust-critical (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>infra / benefits</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/denial-appeal/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/denial-appeal/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/denial-appeal/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B3-06</code></td>
   <td>Airbnb net calculator</td>
+  <td class="desc">Paste payout → platform fees, taxes, true net nightly</td>
+  <td class="est">$9–12/mo host tool (ESTIMATE)</td>
+  <td class="est">r/AirBnBHosts + host FB groups (ESTIMATE)</td>
+  <td class="est">~1–2k host subs → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>side hustle</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/airbnb-net/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/airbnb-net/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/airbnb-net/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B3-07</code></td>
   <td>UXR study matcher</td>
+  <td class="desc">Profile → ranked user-research boards + payout norms</td>
+  <td class="est">Free + affiliate / $8/mo alerts (ESTIMATE)</td>
+  <td class="est">r/UserTesting + beermoney (ESTIMATE)</td>
+  <td class="est">Crowded aggregators; thin wedge to $10k (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>side hustle</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/uxr-matcher/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/uxr-matcher/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/uxr-matcher/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B3-08</code></td>
   <td>Tutoring rate + lead kit</td>
+  <td class="desc">Subject + zip → rate band + parent-group posting kit</td>
+  <td class="est">$15 kit or $9/mo lead drip (ESTIMATE)</td>
+  <td class="est">r/tutors + local parent FB (ESTIMATE)</td>
+  <td class="est">~700–1.5k kits or lead mix → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>side hustle</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/tutor-kit/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/tutor-kit/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/tutor-kit/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B3-09</code></td>
   <td>Gig multi-app earnings board</td>
+  <td class="desc">City + hours → which apps pay best now (user-reported)</td>
+  <td class="est">$6–10/mo city board (ESTIMATE)</td>
+  <td class="est">r/UberEATS + r/doordash_drivers (ESTIMATE)</td>
+  <td class="est">Stale-data risk; ~1–2k driver subs if fresh (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>side hustle</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/multiapp-board/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/multiapp-board/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/multiapp-board/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B3-10</code></td>
   <td>Turo net calculator</td>
+  <td class="desc">Your car + city → projected Turo net after fees/insurance</td>
+  <td class="est">$12 calc or $8/mo host tool (ESTIMATE)</td>
+  <td class="est">r/turo + host FB (ESTIMATE)</td>
+  <td class="est">~800–1.5k hosts → $10–20k path (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>side hustle</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/turo-net/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/turo-net/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/turo-net/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B4-01</code></td>
   <td>Whiskey inventory tracker</td>
+  <td class="desc">Log bottles → collection value + open-next suggestions</td>
+  <td class="est">$5–9/mo (ESTIMATE)</td>
+  <td class="est">r/whiskey + bourbon FB (ESTIMATE)</td>
+  <td class="est">Niche collectors; ~1.5–3k subs → $10–20k (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>vices / alcohol</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/whiskey-tracker/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/whiskey-tracker/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/whiskey-tracker/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B4-02</code></td>
   <td>Sober-curious drink swaps</td>
+  <td class="desc">Usual drinks → NA alternatives + weekly $ and calorie delta</td>
+  <td class="est">Free + affiliate NA brands / $5/mo (ESTIMATE)</td>
+  <td class="est">r/stopdrinking + NA beer FB (ESTIMATE)</td>
+  <td class="est">Affiliate NA brands strongest $10k path (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>vices / alcohol</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/sober-curious/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/sober-curious/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/sober-curious/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B4-03</code></td>
   <td>Sports betting tax log</td>
+  <td class="desc">Import book CSVs → YTD win/loss for tax prep (legal states)</td>
+  <td class="est">$15–29 tax-season pack or $9/mo (ESTIMATE)</td>
+  <td class="est">r/sportsbook + PF tax threads (ESTIMATE)</td>
+  <td class="est">Seasonal spike; ~500–1k packs → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>vices / gambling (legal)</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/betting-tax-log/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/betting-tax-log/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/betting-tax-log/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B4-04</code></td>
   <td>Couples check-in (21+)</td>
+  <td class="desc">Weekly prompts → shared private notes (wellness framing)</td>
+  <td class="est">$6–10/mo couple (ESTIMATE)</td>
+  <td class="est">Careful relationship FB + r/sexover30 (ESTIMATE)</td>
+  <td class="est">Churn risk; need retention for $10k (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>vices / adult wellness</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/couples-checkin/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/couples-checkin/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/couples-checkin/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B4-05</code></td>
   <td>Lab trend tracker</td>
+  <td class="desc">Upload lab PDFs → trend chart + questions for clinician</td>
+  <td class="est">$9–12/mo (ESTIMATE)</td>
+  <td class="est">r/Testosterone + men’s health FB (ESTIMATE)</td>
+  <td class="est">~1–2k trackers → $10–20k; info-only framing (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>cheating / hormones</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/lab-trends/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/lab-trends/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/lab-trends/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B4-06</code></td>
   <td>Protein shortcut math</td>
+  <td class="desc">Goal protein/day → cheapest grocery vs shake vs kit path</td>
+  <td class="est">Free calc + affiliate / $5/mo (ESTIMATE)</td>
+  <td class="est">r/fitness + r/HealthyFood + TikTok (ESTIMATE)</td>
+  <td class="est">Viral calc + whey affiliate → $10k path (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>cheating / eating</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/protein-math/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/protein-math/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/protein-math/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B4-07</code></td>
   <td>Dental tourism quote pack</td>
+  <td class="desc">Procedure list → destination clinics + all-in travel math</td>
+  <td class="est">$29 pack or clinic referral (ESTIMATE)</td>
+  <td class="est">r/dentistry + medical-tourism FB (ESTIMATE)</td>
+  <td class="est">High-ticket referrals; tens/mo → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>cheating / medical tourism</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/dental-tourism/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/dental-tourism/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/dental-tourism/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B4-08</code></td>
   <td>Skincare cost cutter</td>
+  <td class="desc">Current routine → dupe swaps by ingredient</td>
+  <td class="est">Free + affiliate / $7 routine cut (ESTIMATE)</td>
+  <td class="est">r/SkincareAddiction + TikTok (ESTIMATE)</td>
+  <td class="est">Cal-AI organic; affiliate Sephora/TO path (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>masstige</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/skincare-cutter/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/skincare-cutter/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/skincare-cutter/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B4-09</code></td>
   <td>Lease-break risk checker</td>
+  <td class="desc">Lease terms + reason → risk score + script templates</td>
+  <td class="est">$19 check (ESTIMATE)</td>
+  <td class="est">City rent FB + r/legaladvice-adjacent (ESTIMATE)</td>
+  <td class="est">~500–1k checks/mo move season → $10–20k (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>lights-on / housing</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/lease-break/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/lease-break/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/lease-break/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B4-10</code></td>
   <td>Outage prep checklist</td>
+  <td class="desc">Zip + home type → outage kit + utility credit programs</td>
+  <td class="est">$9 kit or seasonal $5 (ESTIMATE)</td>
+  <td class="est">Storm-belt FB + light prep Reddit (ESTIMATE)</td>
+  <td class="est">Seasonal; storm spikes; affiliate generators/kits (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>lights-on / utilities</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/outage-prep/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/outage-prep/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/outage-prep/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B5-01</code></td>
   <td>Tool library map</td>
+  <td class="desc">Zip → nearby tool libraries + borrow vs buy</td>
+  <td class="est">Free + affiliate tools / city sponsor (ESTIMATE)</td>
+  <td class="est">r/BuyItForLife + Buy Nothing FB (ESTIMATE)</td>
+  <td class="est">Local data hard; sponsor/affiliate path (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>lights-on / trades</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/tool-library/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/tool-library/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/tool-library/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B5-02</code></td>
   <td>Student transit optimizer</td>
+  <td class="desc">Campus + commute → cheapest semester pass vs day tickets</td>
+  <td class="est">Free campus tool / uni B2B (ESTIMATE)</td>
+  <td class="est">Campus FB + r/college (ESTIMATE)</td>
+  <td class="est">B2B to universities clearer than consumer $10k (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>infra / transit</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/student-transit/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/student-transit/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/student-transit/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B5-03</code></td>
   <td>Childcare waitlist + subsidy</td>
+  <td class="desc">Track daycare apps + CCR&R/subsidy links in one checklist</td>
+  <td class="est">$9–12/mo parent tool (needs metro) (ESTIMATE)</td>
+  <td class="est">Local parents FB + r/WorkingMoms (ESTIMATE)</td>
+  <td class="est">Metro-locked; sticky parents → $10–20k/city (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>infra / benefits (needs metro)</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/childcare-waitlist/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/childcare-waitlist/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/childcare-waitlist/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="kill">
   <td><code>B5-04</code></td>
   <td>Freelance quarterly set-aside</td>
+  <td class="desc">FOLDED — overlap with gig tax; CSV path absorbed by B0-02</td>
+  <td class="est">— (use B0-02)</td>
+  <td class="est">—</td>
+  <td class="est">—</td>
   <td><span class="pill kill">FOLDED → B0-02</span></td>
   <td>side hustle (killed as separate)</td>
-  <td>—</td>
+  <td class="page">—</td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="advance">
   <td><code>B5-05</code></td>
   <td>Rover / pet-sit net</td>
+  <td class="desc">Rates + days → net after fees/insurance vs boarding</td>
+  <td class="est">$8–12/mo sitter tool (ESTIMATE)</td>
+  <td class="est">r/RoveSitters + pet FB (ESTIMATE)</td>
+  <td class="est">~1–2k sitters → $10–20k (ESTIMATE)</td>
   <td><span class="pill advance">ADVANCE</span></td>
   <td>side hustle</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/rover-net/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/rover-net/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/rover-net/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B5-06</code></td>
   <td>Friends pool ledger</td>
+  <td class="desc">Group stake tracker — who put in what, square-up reminders</td>
+  <td class="est">Free + $5/mo group pro (ESTIMATE)</td>
+  <td class="est">Casual sports FB + Super Bowl season SEO (ESTIMATE)</td>
+  <td class="est">Seasonal; hard to $10k year-round (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>vices / gambling social</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/pool-ledger/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/pool-ledger/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/pool-ledger/</a></td>
   <td>—</td>
   <td>—</td>
 </tr><tr class="iterate">
   <td><code>B5-07</code></td>
   <td>GLP-1 meal pack (food only)</td>
+  <td class="desc">Low-appetite meal templates that still hit protein (food only)</td>
+  <td class="est">Free pack + affiliate groceries / $5/mo (ESTIMATE)</td>
+  <td class="est">r/Semaglutide + TikTok GLP-1 food (ESTIMATE)</td>
+  <td class="est">Content-heavy; affiliate groceries path (ESTIMATE)</td>
   <td><span class="pill iterate">ITERATE</span></td>
   <td>cheating / eating</td>
-  <td><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/glp1-meals/">page</a></td>
+  <td class="page"><a href="https://saldrao-77.github.io/lightson-lab-pretotypes/glp1-meals/" target="_blank" rel="noopener">https://saldrao-77.github.io/lightson-lab-pretotypes/glp1-meals/</a></td>
   <td>—</td>
   <td>—</td>
 </tr>
     </tbody>
   </table>
+  </div>
 
   <footer>
     Live dashboard: <a href="https://saldrao-77.github.io/lightson-lab-pretotypes/dashboard/">https://saldrao-77.github.io/lightson-lab-pretotypes/dashboard/</a><br>
-    Maintained for LightsOn Lab · click any Live test / page link to open it.
+    Maintained for LightsOn Lab · absolute pretotype URLs only · inbox lightsonlab@agentmail.to
   </footer>
 </main>
 <script>
