@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BYOB Party Cost Cap — LightsOn Lab</title>
+  <meta name="description" content="Guest count + budget → bottle list + store cheapest mix">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>BYOB Party Cost Cap</h1>
+    <p class="lead">Guest count + budget → bottle list + store cheapest mix. We’re testing whether $5 one-time plan is useful enough to pay for.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Bottle list matched to guest count</li>
+        <li>Stay inside your party budget</li>
+        <li>Cheapest-mix shopping plan</li>
+      </ul>
+
+      <form data-idea="n02-byob-party-cost-cap" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(we send it here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="party">Party details <span class="hint">(optional)</span></label>
+        <textarea id="party" name="party" rows="3" placeholder="Guest count, budget, and favorite drinks…"></textarea>
+
+        <button class="btn" type="submit">Get the party plan</button>
+        <p class="fineprint">No spam. Early testers only. Pricing ESTIMATE — not charged yet.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the early-access details and next steps.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

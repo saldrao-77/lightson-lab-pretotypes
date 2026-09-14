@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BarTab Split Audit — LightsOn Lab</title>
+  <meta name="description" content="Paste bar receipt → per-person fair split + tip math + who-owes Venmo draft">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>BarTab Split Audit</h1>
+    <p class="lead">Paste bar receipt → per-person fair split + tip math + who-owes Venmo draft. We’re testing whether $3 one-time split is useful enough to pay for.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Per-person fair split from one receipt</li>
+        <li>Tip math included</li>
+        <li>Who-owes-you Venmo draft</li>
+      </ul>
+
+      <form data-idea="n01-bartab-split-audit" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(we send it here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="receipt">Receipt details <span class="hint">(optional)</span></label>
+        <textarea id="receipt" name="receipt" rows="3" placeholder="Paste items, tax, tip, and who shared what…"></textarea>
+
+        <button class="btn" type="submit">Get my split</button>
+        <p class="fineprint">No spam. Early testers only. Pricing ESTIMATE — not charged yet.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the early-access details and next steps.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>
