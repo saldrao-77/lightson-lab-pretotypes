@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab trend tracker — LightsOn Lab</title>
+  <meta name="description" content="Upload lab PDFs → trend chart plus questions to ask your clinician. Info only.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Info only · not medical advice</span>
+    <h1>Chart the labs. Take questions to your doctor.</h1>
+    <p class="lead">Upload lab PDFs. Get a simple trend and questions worth asking a clinician. Not a clinic. Not TRT.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Trends, not a diagnosis</li>
+        <li>Questions for your clinician</li>
+        <li>PDFs stay yours</li>
+      </ul>
+
+      <form data-idea="lab-trends" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the chart goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="note">What you’re tracking <span class="hint">(optional)</span></label>
+        <input id="note" name="note" type="text" placeholder="e.g. testosterone, TSH">
+
+        <button class="btn" type="submit">Chart my labs for my doctor</button>
+        <p class="fineprint">Not medical advice. Not a clinic. Do not send full identifiers.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email how the chart + question list will work.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

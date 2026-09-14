@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gig multi-app earnings board — LightsOn Lab</title>
+  <meta name="description" content="City + hours → which apps pay best right now, from driver reports.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>Which app is actually paying in your city today</h1>
+    <p class="lead">Driver-reported, city-level. Which apps are worth the hours right now — not a national average from 2022.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Your city, this week</li>
+        <li>User-reported, not scraped offers</li>
+        <li>Hours in, dollars out</li>
+      </ul>
+
+      <form data-idea="multiapp-board" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the board goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="city">City + usual hours <span class="hint">(optional)</span></label>
+        <input id="city" name="city" type="text" placeholder="Phoenix · dinner rush">
+
+        <button class="btn" type="submit">See today’s best app in my city</button>
+        <p class="fineprint">Reports go stale. Not affiliated with Uber/DoorDash/etc. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email when a board exists for your city.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

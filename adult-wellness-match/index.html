@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adult wellness match — LightsOn Lab</title>
+  <meta name="description" content="Private 2-minute quiz. Legal wellness product shortlist + education. 21+ only. No medical claims.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">21+ only</span>
+    <h1>A private match. No aisle shame.</h1>
+    <p class="lead">Two-minute preference quiz. Legal adult-wellness options and education — no medical claims, no creepy ads.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Age-gated, private</li>
+        <li>Education + shortlist, not a diagnosis</li>
+        <li>No photos required</li>
+      </ul>
+
+      <form data-idea="adult-wellness-match" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(results go here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="age_confirm">I confirm I am 21 or older</label>
+        <select id="age_confirm" name="age_confirm" required>
+          <option value="">Select…</option>
+          <option value="yes">Yes, I am 21+</option>
+        </select>
+
+        <button class="btn" type="submit">Private match in 2 min</button>
+        <p class="fineprint">21+ only. Not medical advice. Legal products only. We’ll never share your answers.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email a private shortlist. Nothing posts anywhere.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

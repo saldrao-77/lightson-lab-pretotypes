@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicotine taper planner — LightsOn Lab</title>
+  <meta name="description" content="Log pouches, vape, or gum. Get a step-down calendar and dollars saved. Legal products only.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Legal products only</span>
+    <h1>Step down. See the money.</h1>
+    <p class="lead">Log what you use now. Get a simple taper calendar and what you’d save if you actually follow it.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Calendar, not a lecture</li>
+        <li>Cost saved in dollars</li>
+        <li>Pouches / vape / gum</li>
+      </ul>
+
+      <form data-idea="nicotine-taper" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(plan goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="current_use">What you use now <span class="hint">(optional)</span></label>
+        <input id="current_use" name="current_use" type="text" placeholder="e.g. 8 pouches/day">
+
+        <button class="btn" type="submit">Build my taper + $ saved</button>
+        <p class="fineprint">Not a medical treatment. Legal nicotine products only. 21+ where required.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email your taper calendar and savings math.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

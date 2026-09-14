@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deal verifier — LightsOn Lab</title>
+  <meta name="description" content="Paste a viral deal link. Get scam / shipping / return red flags.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>Is this deal real?</h1>
+    <p class="lead">Paste the TikTok/Instagram shop link. We’ll score scam, shipping, and return-policy red flags before you tap buy.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Red-flag score, not a vibe check</li>
+        <li>Shipping + returns, not just price</li>
+        <li>Works on a URL</li>
+      </ul>
+
+      <form data-idea="deal-verifier" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the score goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="deal_url">Deal URL <span class="hint">(optional)</span></label>
+        <input id="deal_url" name="deal_url" type="url" placeholder="https://…">
+
+        <button class="btn" type="submit">Check this deal</button>
+        <p class="fineprint">Info only. Not a guarantee. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the red-flag checklist and score your first link.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

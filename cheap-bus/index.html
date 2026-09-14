@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheap bus / rail finder — LightsOn Lab</title>
+  <meta name="description" content="City pair + date → cheapest bus/rail mix and overnight tips.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>The cheapest seat, not the fastest</h1>
+    <p class="lead">Tell us city pair and date. We’ll compare bus and rail mixes plus overnight tips — for cash travelers, not business class.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Bus + rail, not just one carrier</li>
+        <li>Overnight / transfer gotchas called out</li>
+        <li>Price-first</li>
+      </ul>
+
+      <form data-idea="cheap-bus" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the options go here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="route">From → to + date <span class="hint">(optional)</span></label>
+        <input id="route" name="route" type="text" placeholder="Houston → Atlanta, Oct 3">
+
+        <button class="btn" type="submit">Find my cheapest seat</button>
+        <p class="fineprint">Schedules change. Verify with the carrier. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email a cheap-seat mix for your route.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

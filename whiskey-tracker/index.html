@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whiskey inventory tracker — LightsOn Lab</title>
+  <meta name="description" content="Log bottles → collection value and what to open next.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>What’s on the shelf — and what’s it worth</h1>
+    <p class="lead">Log bottles. See collection value and a “open next” suggestion. For collectors, not bars.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Value tracking</li>
+        <li>Open-next, not buy-more</li>
+        <li>Your list stays private</li>
+      </ul>
+
+      <form data-idea="whiskey-tracker" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the tracker goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="bottles">A few bottles you have <span class="hint">(optional)</span></label>
+        <textarea id="bottles" name="bottles" placeholder="Eagle Rare, a dusty gift bottle of Macallan…"></textarea>
+
+        <button class="btn" type="submit">Track my bar’s value</button>
+        <p class="fineprint">21+. Estimates only. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email when the tracker is ready.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

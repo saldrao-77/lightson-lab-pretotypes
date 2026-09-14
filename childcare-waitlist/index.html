@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Childcare waitlist + subsidy pack — LightsOn Lab</title>
+  <meta name="description" content="Track multiple daycare applications plus CCR&amp;R and subsidy form links. One metro.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>One list for every daycare you’re waiting on</h1>
+    <p class="lead">Track applications, follow-ups, and subsidy/CCR&amp;R links in one checklist — not another parenting forum.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Multi-daycare tracker</li>
+        <li>Subsidy / CCR&amp;R links</li>
+        <li>Your metro</li>
+      </ul>
+
+      <form data-idea="childcare-waitlist" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the pack goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="metro">Your metro <span class="hint">(required for this test)</span></label>
+        <input id="metro" name="metro" type="text" placeholder="e.g. Austin">
+        <label for="kids">Ages / days needed <span class="hint">(optional)</span></label>
+        <input id="kids" name="kids" type="text" placeholder="14 months, M–F">
+
+        <button class="btn" type="submit">Organize my childcare hunt</button>
+        <p class="fineprint">Not a government site. Not a placement agency. We don’t contact daycares for you.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the tracker + subsidy links for your metro.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoolSculpt / aesthetics price map — LightsOn Lab</title>
+  <meta name="description" content="Zip code → clinic price ranges for popular non-invasive body treatments.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>See the real price range near you</h1>
+    <p class="lead">Medspas hide prices. Enter a zip. Get ranges for popular non-invasive body treatments — not a booking site.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Ranges, not fake “from $99”</li>
+        <li>Your zip, not a national average</li>
+        <li>No clinic spam</li>
+      </ul>
+
+      <form data-idea="coolsculpt-prices" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the map goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="zip">Zip code <span class="hint">(optional)</span></label>
+        <input id="zip" name="zip" type="text" inputmode="numeric" placeholder="78704">
+
+        <button class="btn" type="submit">See prices near me</button>
+        <p class="fineprint">Info only. Not a medical recommendation. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email clinic price ranges for your zip when we have density.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>
