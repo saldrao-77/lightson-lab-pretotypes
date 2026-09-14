@@ -6,6 +6,32 @@ Base: https://saldrao-77.github.io/lightson-lab-pretotypes/
 
 - [dashboard](https://saldrao-77.github.io/lightson-lab-pretotypes/dashboard/) ← open this first
 
+
+## NEW wave 1
+
+20 NEW wave 1 pages are live.
+
+- [n01-bartab-split-audit](https://saldrao-77.github.io/lightson-lab-pretotypes/n01-bartab-split-audit/)
+- [n02-byob-party-cost-cap](https://saldrao-77.github.io/lightson-lab-pretotypes/n02-byob-party-cost-cap/)
+- [n03-happyhour-radius](https://saldrao-77.github.io/lightson-lab-pretotypes/n03-happyhour-radius/)
+- [n04-wine-club-escape-kit](https://saldrao-77.github.io/lightson-lab-pretotypes/n04-wine-club-escape-kit/)
+- [n05-na-bar-starter-pack](https://saldrao-77.github.io/lightson-lab-pretotypes/n05-na-bar-starter-pack/)
+- [n25-rotisserie-week-builder](https://saldrao-77.github.io/lightson-lab-pretotypes/n25-rotisserie-week-builder/)
+- [n26-doordash-guilt-math](https://saldrao-77.github.io/lightson-lab-pretotypes/n26-doordash-guilt-math/)
+- [n27-macro-convenience-ladder](https://saldrao-77.github.io/lightson-lab-pretotypes/n27-macro-convenience-ladder/)
+- [n28-kid-lunch-2-builder](https://saldrao-77.github.io/lightson-lab-pretotypes/n28-kid-lunch-2-builder/)
+- [n29-airfryer-dump-pantry](https://saldrao-77.github.io/lightson-lab-pretotypes/n29-airfryer-dump-pantry/)
+- [n51-deposit-return-fighter](https://saldrao-77.github.io/lightson-lab-pretotypes/n51-deposit-return-fighter/)
+- [n52-roommate-bill-splitter-pro](https://saldrao-77.github.io/lightson-lab-pretotypes/n52-roommate-bill-splitter-pro/)
+- [n53-hoa-fee-decoder](https://saldrao-77.github.io/lightson-lab-pretotypes/n53-hoa-fee-decoder/)
+- [n54-water-leak-bill-explainer](https://saldrao-77.github.io/lightson-lab-pretotypes/n54-water-leak-bill-explainer/)
+- [n55-solar-quote-bs-detector](https://saldrao-77.github.io/lightson-lab-pretotypes/n55-solar-quote-bs-detector/)
+- [n43-sephora-cart-cutter](https://saldrao-77.github.io/lightson-lab-pretotypes/n43-sephora-cart-cutter/)
+- [n44-designer-bag-auth-flags](https://saldrao-77.github.io/lightson-lab-pretotypes/n44-designer-bag-auth-flags/)
+- [n45-perfume-decant-ladder](https://saldrao-77.github.io/lightson-lab-pretotypes/n45-perfume-decant-ladder/)
+- [n46-wedding-guest-outfit-cap](https://saldrao-77.github.io/lightson-lab-pretotypes/n46-wedding-guest-outfit-cap/)
+- [n47-sneaker-retail-alert-lite](https://saldrao-77.github.io/lightson-lab-pretotypes/n47-sneaker-retail-alert-lite/)
+
 ## Full published set
 
 The full set of 49 ADVANCE + ITERATE pretotype pages is live.
