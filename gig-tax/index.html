@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gig Tax Set-Aside — LightsOn Lab</title>
+  <meta name="description" content="Forward a payout / Stripe email or paste last week’s earnings. We’ll tell you how much to set aside this week for quarterly taxes.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>Know exactly how much to set aside this week</h1>
+    <p class="lead">Forward a payout email — or paste last week’s gross. We’ll estimate your federal + state set-aside so quarterly taxes don’t ambush you. Freelancers (Stripe/PayPal) welcome too — same quarterly math.</p>
+
+    <div class="card">
+      <h2>Built for drivers &amp; gig workers</h2>
+      <ul class="bullets">
+        <li>Weekly set-aside $ (not a year-end surprise)</li>
+        <li>Accounts for self-employment tax + rough state estimate</li>
+        <li>Plain-English note you can paste into a savings transfer</li>
+      </ul>
+
+      <form data-idea="gig-tax" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(we reply with your set-aside)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="platform">I drive / work for <span class="hint">(optional)</span></label>
+        <input id="platform" name="platform" type="text" placeholder="Uber, DoorDash, Lyft, Instacart…">
+
+        <label for="gross">Last week’s gross $ <span class="hint">(optional)</span></label>
+        <input id="gross" name="gross" type="number" min="0" step="0.01" placeholder="e.g. 842.50" inputmode="decimal">
+
+        <button class="btn" type="submit">Get my weekly set-aside</button>
+        <p class="fineprint">Not tax advice — an estimate to help you transfer money aside. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email your weekly set-aside estimate shortly. Reply with a payout screenshot if you want it tighter.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

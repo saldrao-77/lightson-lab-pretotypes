@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bankroll tilt journal — LightsOn Lab</title>
+  <meta name="description" content="Stake log + kill-switch when your own tilt rules trip. Legal sports/DFS only. Free early access.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Legal markets only</span>
+    <h1>Stop tilting your bankroll</h1>
+    <p class="lead">Log stakes. Set your own stop rules. Get a kill-switch ping when you break them. Legal sports/DFS only — not a sportsbook.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Your rules, not ours</li>
+        <li>Kill-switch when you hit loss/time limits</li>
+        <li>No betting, no odds, no deposits</li>
+      </ul>
+
+      <form data-idea="tilt-journal" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(we send the journal here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="state">State you bet in <span class="hint">(legal markets only)</span></label>
+        <input id="state" name="state" type="text" placeholder="e.g. NJ">
+        <label for="tilt_rule">One tilt rule you already try to follow <span class="hint">(optional)</span></label>
+        <input id="tilt_rule" name="tilt_rule" type="text" placeholder="Stop after 3 losses">
+
+        <button class="btn" type="submit">Set my tilt rules</button>
+        <p class="fineprint">21+ where required. Not a gambling operator. Legal-state users only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email when the journal + kill-switch is ready.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

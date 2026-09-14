@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apartment fee decoder — LightsOn Lab</title>
+  <meta name="description" content="Paste a lease or fee sheet. See junk fees totaled plus a negotiation script.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>Your rent isn’t the number on the flyer</h1>
+    <p class="lead">Paste the fee sheet. We’ll total junk fees and give you a short script to push back.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>True monthly, not base rent</li>
+        <li>Which fees are actually junk</li>
+        <li>A script, not legal advice</li>
+      </ul>
+
+      <form data-idea="fee-decoder" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the decode goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="fees">Paste fees / lease excerpts <span class="hint">(optional)</span></label>
+        <textarea id="fees" name="fees" placeholder="amenity $75, trash $35, pest $15…"></textarea>
+
+        <button class="btn" type="submit">Decode my junk fees</button>
+        <p class="fineprint">Not legal advice. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the fee total and a short script.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

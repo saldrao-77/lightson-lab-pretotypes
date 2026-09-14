@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GLP-1 cash vs coupon planner — LightsOn Lab</title>
+  <meta name="description" content="Dose + pharmacy → monthly cash path, coupon stack, compounding clinic comps. Info only. Not medical advice.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Info only · not medical advice</span>
+    <h1>The cheapest legal path to your dose</h1>
+    <p class="lead">Input dose and where you fill. See cash, coupon, and compounding-clinic ranges — information only, not a prescription.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Cash vs coupon vs clinic comps</li>
+        <li>No clinic signup required</li>
+        <li>Not medical advice</li>
+      </ul>
+
+      <form data-idea="glp1-cash-path" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the planner goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="dose">Dose / drug <span class="hint">(optional)</span></label>
+        <input id="dose" name="dose" type="text" placeholder="e.g. semaglutide 0.5mg">
+        <label for="state">State <span class="hint">(optional)</span></label>
+        <input id="state" name="state" type="text" placeholder="e.g. TX">
+
+        <button class="btn" type="submit">Find my cheapest legal path</button>
+        <p class="fineprint">Not medical advice. Not a pharmacy. Talk to a licensed clinician. Info only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the cash / coupon / clinic range for your inputs.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

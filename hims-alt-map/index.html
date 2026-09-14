@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hims/Hers alternative map — LightsOn Lab</title>
+  <meta name="description" content="Symptom path → telehealth vs OTC vs GP route map and monthly cost bands. Info only.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Info only</span>
+    <h1>Same problems. Less brand markup.</h1>
+    <p class="lead">Map telehealth vs OTC vs your GP — monthly cost bands, no brand loyalty required.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Telehealth vs OTC vs GP</li>
+        <li>Monthly cost bands</li>
+        <li>Not a prescription</li>
+      </ul>
+
+      <form data-idea="hims-alt-map" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the map goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="path">What you’re shopping for <span class="hint">(optional)</span></label>
+        <input id="path" name="path" type="text" placeholder="hair, skin, weight, sexual health…">
+
+        <button class="btn" type="submit">Map my options without the markup</button>
+        <p class="fineprint">Not medical advice. Not a pharmacy. Talk to a licensed clinician.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the route map and cost bands.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutoring rate + lead kit — LightsOn Lab</title>
+  <meta name="description" content="Subject + zip → suggested rate band and a parent-group posting kit.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>Your rate. A post kit. Local parents.</h1>
+    <p class="lead">Subject and zip. A rate band and a ready-to-paste post for parent groups — not another marketplace taking 20%.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Rate band for your zip</li>
+        <li>Post kit, not a lead tax</li>
+        <li>One subject first</li>
+      </ul>
+
+      <form data-idea="tutor-kit" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the kit goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="subject">Subject + zip <span class="hint">(optional)</span></label>
+        <input id="subject" name="subject" type="text" placeholder="SAT math · 78704">
+
+        <button class="btn" type="submit">Get my rate + post kit</button>
+        <p class="fineprint">Early testers only. You’re responsible for how you post in groups.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the rate band and post kit.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

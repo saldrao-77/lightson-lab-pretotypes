@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utility Bill Fight Kit — LightsOn Lab</title>
+  <meta name="description" content="Upload or paste your latest utility bill. Get a dispute letter and a cheaper rate-plan checklist — free early access.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>Stop overpaying on your utility bill</h1>
+    <p class="lead">Upload or paste your latest electric / gas / water bill. We’ll draft a dispute letter and a checklist of cheaper rate plans that actually fit your usage.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>A ready-to-send dispute letter tailored to your bill</li>
+        <li>Rate-plan checklist: lower tiers, budget billing, assistance programs</li>
+        <li>What to ask (and what to ignore) when you call the utility</li>
+      </ul>
+
+      <form data-idea="bill-fight" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(we send the kit here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="bill_text">Paste bill text <span class="hint">(optional)</span></label>
+        <textarea id="bill_text" name="bill_text" placeholder="Account #, usage kWh/therms, charges, rate plan name…"></textarea>
+
+        <div class="file-wrap">
+          <label for="bill_file">Or upload a photo / PDF <span class="hint">(optional)</span></label>
+          <input id="bill_file" name="bill_file" type="file" accept="image/*,.pdf">
+        </div>
+
+        <button class="btn" type="submit">Get my fight kit</button>
+        <p class="fineprint">No spam. Early testers only — we’ll email when your letter is ready.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll send your dispute letter + rate-plan checklist to that inbox. Keep an eye out.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency repair triage — LightsOn Lab</title>
+  <meta name="description" content="Symptom + photo notes → DIY vs call-a-pro, plus a rough cost band.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Info only</span>
+    <h1>DIY or call someone — tonight</h1>
+    <p class="lead">Describe the leak / no-heat / breaker issue. We’ll tell you DIY vs call-a-pro and a rough cost band.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Triage, not a YouTube rabbit hole</li>
+        <li>When waiting makes it worse</li>
+        <li>Rough $ band, not a bid</li>
+      </ul>
+
+      <form data-idea="repair-triage" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the triage goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="symptom">What’s broken <span class="hint">(optional)</span></label>
+        <textarea id="symptom" name="symptom" placeholder="Water under the water heater, no heat, breaker trips…"></textarea>
+
+        <button class="btn" type="submit">Should I DIY or call?</button>
+        <p class="fineprint">Not a licensed inspection. If it’s gas, flooding, or sparks — call a pro / 911.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the triage tree and cost band.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

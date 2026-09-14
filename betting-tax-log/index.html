@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sports betting tax log — LightsOn Lab</title>
+  <meta name="description" content="Import book CSV or paste P&amp;L. Year-to-date win/loss for filing. Legal states only.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Legal states only</span>
+    <h1>YTD win/loss — before tax season blindsides you</h1>
+    <p class="lead">Book CSV or a monthly P&amp;L. A year-to-date win/loss summary you can hand to whoever files. Not a sportsbook.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>YTD P&amp;L, not picks</li>
+        <li>CSV or paste</li>
+        <li>Legal-state users only</li>
+      </ul>
+
+      <form data-idea="betting-tax-log" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the summary goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="state">State you bet in <span class="hint">(legal markets only)</span></label>
+        <input id="state" name="state" type="text" placeholder="e.g. NJ">
+        <label for="pnl">Monthly P&L notes <span class="hint">(optional)</span></label>
+        <textarea id="pnl" name="pnl" placeholder="FanDuel Jan +$120, DraftKings Jan −$40…"></textarea>
+
+        <button class="btn" type="submit">Get my YTD betting P&amp;L for taxes</button>
+        <p class="fineprint">Not tax advice. 21+ where required. Legal-state users only. Not a gambling operator.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email how the YTD log will work. Problem gambling help: 1-800-GAMBLER.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

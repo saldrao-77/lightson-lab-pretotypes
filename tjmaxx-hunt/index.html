@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TJ Maxx / Marshalls hunt list — LightsOn Lab</title>
+  <meta name="description" content="Wishlist brands → alert when similar SKUs hit local off-price. User-reported.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>Stop checking the racks daily</h1>
+    <p class="lead">Name the brands you hunt. Get a ping when someone spots similar SKUs at local TJ Maxx / Marshalls / Homegoods.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>User-reported, not scraped inventory</li>
+        <li>Your brands, your metro</li>
+        <li>No spammy daily digest unless there’s a hit</li>
+      </ul>
+
+      <form data-idea="tjmaxx-hunt" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(alerts go here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="brands">Brands you hunt <span class="hint">(optional)</span></label>
+        <input id="brands" name="brands" type="text" placeholder="Madewell, Le Creuset, Nike…">
+        <label for="metro">Metro <span class="hint">(optional)</span></label>
+        <input id="metro" name="metro" type="text" placeholder="Dallas">
+
+        <button class="btn" type="submit">Alert me when my brands hit</button>
+        <p class="fineprint">Early testers only. Alerts depend on real shopper reports.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email when a hunt list is live for your brands.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

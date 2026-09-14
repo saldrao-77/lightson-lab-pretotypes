@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SNAP week planner — LightsOn Lab</title>
+  <meta name="description" content="Pantry + SNAP budget → recipes and which store/aisle. Dignity-first.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>A week of meals from what’s left on EBT</h1>
+    <p class="lead">Pantry + remaining SNAP balance. Recipes and a store map — no stigma, no lectures.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Budget-first recipes</li>
+        <li>Use what’s already in the pantry</li>
+        <li>Not a benefits screener</li>
+      </ul>
+
+      <form data-idea="snap-week" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the plan goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="budget">SNAP left this month <span class="hint">(optional)</span></label>
+        <input id="budget" name="budget" type="text" placeholder="e.g. $62">
+        <label for="pantry">Pantry / fridge <span class="hint">(optional)</span></label>
+        <textarea id="pantry" name="pantry" placeholder="rice, beans, frozen veg…"></textarea>
+
+        <button class="btn" type="submit">Plan my SNAP week</button>
+        <p class="fineprint">Not a government site. We don’t ask for case numbers. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the week plan. Nothing is shared with any agency.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

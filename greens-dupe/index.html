@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greens powder cost calculator — LightsOn Lab</title>
+  <meta name="description" content="Compare your greens powder to grocery whole-food cost and a simpler stack.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>Is your greens powder worth $80/mo?</h1>
+    <p class="lead">Tell us what you drink. We’ll compare it to grocery produce and a simpler stack — in dollars, not vibes.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Brand-agnostic math</li>
+        <li>Grocery vs powder vs simpler stack</li>
+        <li>No affiliate dump</li>
+      </ul>
+
+      <form data-idea="greens-dupe" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the math goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="brand">What you buy now <span class="hint">(optional)</span></label>
+        <input id="brand" name="brand" type="text" placeholder="AG1, Gruns, Athletic Greens…">
+
+        <button class="btn" type="submit">Is my greens powder worth it?</button>
+        <p class="fineprint">Not nutrition advice. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the cost comparison.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>

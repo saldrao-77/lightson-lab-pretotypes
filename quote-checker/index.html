@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trade quote checker — LightsOn Lab</title>
+  <meta name="description" content="Paste 2–3 HVAC or plumber quotes. Fair-range and red flags.">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Free early access</span>
+    <h1>Is this quote fair — or a shakedown?</h1>
+    <p class="lead">Paste two or three HVAC / plumber quotes. We’ll mark fair-range vs red flags before you pick one.</p>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul class="bullets">
+        <li>Fair-range, not the cheapest</li>
+        <li>Red flags (trip fees, vague line items)</li>
+        <li>Not a contractor directory</li>
+      </ul>
+
+      <form data-idea="quote-checker" novalidate>
+        <div class="hidden-fields" aria-hidden="true">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="page" value="">
+          <input type="hidden" name="idea" value="">
+          <input type="hidden" name="submitted_at" value="">
+        </div>
+
+        <label for="email">Email <span class="hint">(the check goes here)</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+        <label for="quotes">Paste quotes <span class="hint">(optional)</span></label>
+        <textarea id="quotes" name="quotes" placeholder="Quote A $2,400 replace capacitor…"></textarea>
+        <label for="zip">Zip <span class="hint">(optional)</span></label>
+        <input id="zip" name="zip" type="text" inputmode="numeric" placeholder="78704">
+
+        <button class="btn" type="submit">Check if my quote is fair</button>
+        <p class="fineprint">Info only. Not a licensed inspection. Early testers only.</p>
+      </form>
+
+      <div class="success" role="status">
+        <h2>You’re on the list</h2>
+        <p>We’ll email the fair-range notes and red flags.</p>
+        <p class="demo-note">Demo mode: form endpoint isn’t configured yet. Your signup was saved in this browser (localStorage). See <a href="../admin.html">admin.html</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="ilab"><a href="../index.html">LightsOn Lab</a> · pretotype</footer>
+  <script src="../shared.js"></script>
+</body>
+</html>
