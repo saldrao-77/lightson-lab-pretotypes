@@ -2,6 +2,10 @@
 
 Base: https://saldrao-77.github.io/lightson-lab-pretotypes/
 
+## Command center
+
+- [dashboard](https://saldrao-77.github.io/lightson-lab-pretotypes/dashboard/) ← Sal open this first
+
 ## Pages
 
 - [bill-fight](https://saldrao-77.github.io/lightson-lab-pretotypes/bill-fight/)

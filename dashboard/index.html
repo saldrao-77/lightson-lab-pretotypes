@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LightsOn Lab — Command Center</title>
+<style>
+:root { --bg:#0b0d10; --card:#141820; --line:#243044; --text:#e8eaed; --muted:#9aa0a6;
+  --adv:#81c995; --itr:#fdd663; --kill:#f28b82; --link:#8ab4f8; }
+* { box-sizing:border-box; }
+body { margin:0; font:15px/1.45 system-ui,sans-serif; background:var(--bg); color:var(--text); }
+a { color:var(--link); }
+.wrap { max-width:1200px; margin:0 auto; padding:24px 16px 64px; }
+h1 { font-size:28px; margin:0 0 4px; }
+.sub { color:var(--muted); margin-bottom:24px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:24px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+.card .n { font-size:28px; font-weight:700; }
+.card .l { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+.blockers { background:#2a1a10; border:1px solid #5c3b1e; border-radius:12px; padding:14px 16px; margin-bottom:24px; }
+.blockers h2 { margin:0 0 8px; font-size:16px; color:#f5a623; }
+table { width:100%; border-collapse:collapse; background:var(--card); border-radius:12px; overflow:hidden; }
+th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+.pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; font-weight:600; }
+.pill.advance { background:#14301f; color:var(--adv); }
+.pill.iterate { background:#2f2a12; color:var(--itr); }
+.pill.kill { background:#3a1512; color:var(--kill); }
+.pill.queued { background:#1a2230; color:var(--muted); }
+.filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+.filters button { background:var(--card); border:1px solid var(--line); color:var(--text); border-radius:999px; padding:6px 12px; cursor:pointer; }
+.filters button.on { border-color:var(--link); color:var(--link); }
+footer { margin-top:24px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>LightsOn Lab — Command Center</h1>
+  <p class="sub">Polsia-style Idea Lab view · Updated 2026-09-14 18:46 UTC · Brand: LightsOn Lab · Inbox: lightsonlab@agentmail.to</p>
+
+  <div class="grid">
+    <div class="card"><div class="n">23</div><div class="l">Advance</div></div>
+    <div class="card"><div class="n">26</div><div class="l">Iterate</div></div>
+    <div class="card"><div class="n">1</div><div class="l">Folded</div></div>
+    <div class="card"><div class="n">2</div><div class="l">Live Reddit tests</div></div>
+    <div class="card"><div class="n">5+</div><div class="l">Emails sent</div></div>
+    <div class="card"><div class="n">0</div><div class="l">Signups</div></div>
+  </div>
+
+  <div class="blockers">
+    <h2>Still cooking</h2>
+    <ul>
+      <li>GitHub Pages publish finishing (Builder) — live pretotype links next</li>
+      <li>Facebook / Nextdoor accounts creating with AgentMail</li>
+      <li>FormSubmit confirm once first signup hits the Lab inbox</li>
+      <li>Optional: metro for benefits/childcare depth tests</li>
+    </ul>
+  </div>
+
+  <div class="filters">
+    <button class="on" data-f="all">All</button>
+    <button data-f="advance">Advance</button>
+    <button data-f="iterate">Iterate</button>
+  </div>
+
+  <table id="ideas">
+    <thead>
+      <tr><th>ID</th><th>Idea</th><th>Status</th><th>Lane</th><th>Page</th><th>Live test</th><th>Sentiment</th></tr>
+    </thead>
+    <tbody>
+<tr class="kill">
+  <td><code>B5-04 freelance quarterly</code></td>
+  <td>Overlap with gig tax</td>
+  <td><span class="pill kill">**Folded into B0-02**</span></td>
+  <td>FOLDED</td>
+  <td>—</td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B0-01</code></td>
+  <td>Utility bill fight kit</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>lights-on / utilities</td>
+  <td><a href="../bill-fight/">page</a></td>
+  <td><a href="https://www.reddit.com/r/personalfinance/comments/1wgbk90/when_your_utility_bill_spiked_what_did_you/" target="_blank" rel="noopener">Reddit r/personalfinance (mod queue)</a></td>
+  <td>Awaiting mod / early replies</td>
+</tr><tr class="advance">
+  <td><code>B0-02</code></td>
+  <td>Gig + freelance tax set-aside (absorbs B5-04)</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>side hustle / gig + freelance</td>
+  <td><a href="../gig-tax/">page</a></td>
+  <td><a href="https://www.reddit.com/r/uberdrivers/comments/1wgbm86/last_tax_season_with_gig_income_refund_owe_or/" target="_blank" rel="noopener">Reddit r/uberdrivers LIVE</a></td>
+  <td>Live — collecting</td>
+</tr><tr class="iterate">
+  <td><code>B0-03</code></td>
+  <td>Cabinet → cocktails</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>vices / alcohol</td>
+  <td><a href="../cabinet-cocktails/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B1-01</code></td>
+  <td>Dead-stock wine alerts</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>vices / alcohol</td>
+  <td><a href="../dead-stock-wine/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B1-02</code></td>
+  <td>Bankroll tilt journal</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>vices / gambling (legal)</td>
+  <td><a href="../tilt-journal/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B1-03</code></td>
+  <td>Supplement stack audit</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>vices / legal wellness</td>
+  <td><a href="../stack-audit/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B1-04</code></td>
+  <td>Nicotine quit taper planner</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>vices / nicotine-adjacent</td>
+  <td><a href="../nicotine-taper/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B1-05</code></td>
+  <td>Adult wellness match (21+)</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>vices / adult wellness</td>
+  <td><a href="../adult-wellness-match/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B1-06</code></td>
+  <td>Greens/AG dupe cost calculator</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>cheating / eating</td>
+  <td><a href="../greens-dupe/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B1-07</code></td>
+  <td>GLP-1 cash vs coupon planner</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>cheating / weight-loss</td>
+  <td><a href="../glp1-cash-path/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B1-08</code></td>
+  <td>CoolSculpt price map</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>cheating / aesthetics</td>
+  <td><a href="../coolsculpt-prices/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B1-09</code></td>
+  <td>Hair transplant tourism comp</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>cheating / medical tourism</td>
+  <td><a href="../hair-tourism/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B1-10</code></td>
+  <td>Hims/Hers alternative map</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>cheating / aesthetics-hormones</td>
+  <td><a href="../hims-alt-map/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B2-01</code></td>
+  <td>Masstige lookalike finder</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>masstige</td>
+  <td><a href="../lookalike-finder/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B2-02</code></td>
+  <td>TJ Maxx hunt list</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>masstige / discount</td>
+  <td><a href="../tjmaxx-hunt/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B2-03</code></td>
+  <td>Dollar-store dinner planner</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>masstige / grocery</td>
+  <td><a href="../dollar-dinners/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B2-04</code></td>
+  <td>Deal verifier</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>masstige / almost-too-good</td>
+  <td><a href="../deal-verifier/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B2-05</code></td>
+  <td>Mobile-home park screener</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>lights-on / housing</td>
+  <td><a href="../mobile-home-screener/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B2-06</code></td>
+  <td>Apartment fee decoder</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>lights-on / housing</td>
+  <td><a href="../fee-decoder/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B2-07</code></td>
+  <td>Trade quote checker</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>lights-on / trades</td>
+  <td><a href="../quote-checker/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B2-08</code></td>
+  <td>Emergency repair triage</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>lights-on / trades</td>
+  <td><a href="../repair-triage/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B2-09</code></td>
+  <td>Aldi/Costco basket optimizer</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>lights-on / grocery</td>
+  <td><a href="../basket-optimizer/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B2-10</code></td>
+  <td>SNAP week planner</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>lights-on / benefits</td>
+  <td><a href="../snap-week/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B3-01</code></td>
+  <td>Cheap bus / rail finder</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>infra / transit</td>
+  <td><a href="../cheap-bus/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B3-02</code></td>
+  <td>Commute cost killer</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>infra / transit</td>
+  <td><a href="../commute-cost/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B3-03</code></td>
+  <td>Benefits stack screener</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>infra / benefits (needs metro)</td>
+  <td><a href="../benefits-screener/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B3-04</code></td>
+  <td>Recert reminders</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>infra / benefits</td>
+  <td><a href="../recert-reminders/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B3-05</code></td>
+  <td>Denial appeal kit</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>infra / benefits</td>
+  <td><a href="../denial-appeal/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B3-06</code></td>
+  <td>Airbnb net calculator</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>side hustle</td>
+  <td><a href="../airbnb-net/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B3-07</code></td>
+  <td>UXR study matcher</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>side hustle</td>
+  <td><a href="../uxr-matcher/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B3-08</code></td>
+  <td>Tutoring rate + lead kit</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>side hustle</td>
+  <td><a href="../tutor-kit/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B3-09</code></td>
+  <td>Gig multi-app earnings board</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>side hustle</td>
+  <td><a href="../multiapp-board/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B3-10</code></td>
+  <td>Turo net calculator</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>side hustle</td>
+  <td><a href="../turo-net/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B4-01</code></td>
+  <td>Whiskey inventory tracker</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>vices / alcohol</td>
+  <td><a href="../whiskey-tracker/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B4-02</code></td>
+  <td>Sober-curious drink swaps</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>vices / alcohol</td>
+  <td><a href="../sober-curious/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B4-03</code></td>
+  <td>Sports betting tax log</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>vices / gambling (legal)</td>
+  <td><a href="../betting-tax-log/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B4-04</code></td>
+  <td>Couples check-in (21+)</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>vices / adult wellness</td>
+  <td><a href="../couples-checkin/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B4-05</code></td>
+  <td>Lab trend tracker</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>cheating / hormones</td>
+  <td><a href="../lab-trends/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B4-06</code></td>
+  <td>Protein shortcut math</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>cheating / eating</td>
+  <td><a href="../protein-math/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B4-07</code></td>
+  <td>Dental tourism quote pack</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>cheating / medical tourism</td>
+  <td><a href="../dental-tourism/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B4-08</code></td>
+  <td>Skincare cost cutter</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>masstige</td>
+  <td><a href="../skincare-cutter/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B4-09</code></td>
+  <td>Lease-break risk checker</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>lights-on / housing</td>
+  <td><a href="../lease-break/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B4-10</code></td>
+  <td>Outage prep checklist</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>lights-on / utilities</td>
+  <td><a href="../outage-prep/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B5-01</code></td>
+  <td>Tool library map</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>lights-on / trades</td>
+  <td><a href="../tool-library/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B5-02</code></td>
+  <td>Student transit optimizer</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>infra / transit</td>
+  <td><a href="../student-transit/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B5-03</code></td>
+  <td>Childcare waitlist + subsidy</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>infra / benefits (needs metro)</td>
+  <td><a href="../childcare-waitlist/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="kill">
+  <td><code>B5-04</code></td>
+  <td>Freelance quarterly set-aside</td>
+  <td><span class="pill kill">FOLDED → B0-02</span></td>
+  <td>side hustle (killed as separate)</td>
+  <td>—</td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="advance">
+  <td><code>B5-05</code></td>
+  <td>Rover / pet-sit net</td>
+  <td><span class="pill advance">ADVANCE</span></td>
+  <td>side hustle</td>
+  <td><a href="../rover-net/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B5-06</code></td>
+  <td>Friends pool ledger</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>vices / gambling social</td>
+  <td><a href="../pool-ledger/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr><tr class="iterate">
+  <td><code>B5-07</code></td>
+  <td>GLP-1 meal pack (food only)</td>
+  <td><span class="pill iterate">ITERATE</span></td>
+  <td>cheating / eating</td>
+  <td><a href="../glp1-meals/">page</a></td>
+  <td>—</td>
+  <td>—</td>
+</tr>
+    </tbody>
+  </table>
+
+  <footer>
+    Local path while Pages deploys: open this file in a browser, or after publish use the dashboard link Builder pastes.<br>
+    Maintained for Idea Lab · click any Live test / page link to open it.
+  </footer>
+</main>
+<script>
+const buttons=[...document.querySelectorAll('.filters button')];
+const rows=[...document.querySelectorAll('#ideas tbody tr')];
+buttons.forEach(b=>b.onclick=()=>{
+  buttons.forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  const f=b.dataset.f;
+  rows.forEach(r=>{
+    r.style.display = (f==='all'||r.classList.contains(f)) ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>
