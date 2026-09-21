@@ -85,3 +85,7 @@ The full set of 49 ADVANCE + ITERATE pretotype pages is live.
 - [tutor-kit](https://saldrao-77.github.io/lightson-lab-pretotypes/tutor-kit/)
 - [uxr-matcher](https://saldrao-77.github.io/lightson-lab-pretotypes/uxr-matcher/)
 - [whiskey-tracker](https://saldrao-77.github.io/lightson-lab-pretotypes/whiskey-tracker/)
+
+## Recently published
+
+- [n101-six-month-insurance-switch](https://saldrao-77.github.io/lightson-lab-pretotypes/n101-six-month-insurance-switch/)
